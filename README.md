@@ -1,1 +1,1 @@
-# BinaryColorShader
+# ColorShader

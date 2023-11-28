@@ -1,5 +1,5 @@
 {
-  "name": "Binary Color Shader",
+  "name": "ColorShades",
   "version": "1.0.0",
   "description": "Now, In Figma Create shades with ease & copy the Hex code directly !!",
   "main": "code.js",
@@ -8,7 +8,7 @@
     "watch": "npm run build -- --watch"
   },
   "author": "Kartik Bambhaniya",
-  "license": "MIT License",
+  "license": "Creative Commons (CC BY-NC) 4.0 License",
   "devDependencies": {
     "@figma/plugin-typings": "*",
     "typescript": "^5.3.2"
