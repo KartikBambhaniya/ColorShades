@@ -59,10 +59,10 @@ function rgbToHex(r, g, b) {
 function generateColorShades(hue) {
   colorShadesContainer.innerHTML = ""; // Clear previous shades
 
-  const numShades = 25; // Number of shades to generate
+  const numShades = 50; // Number of shades to generate
 
   for (let i = 0; i < numShades; i++) {
-    const lightness = (i + 1) * 4; // Calculate lightness for each shade
+    const lightness = (i + 1) * 2; // Calculate lightness for each shade
     const shadeColor = calculateColorShade(hue, lightness); // Calculate the color for the shade
     const shadeDiv = document.createElement("div"); // Create a div for the shade
     shadeDiv.className =
@@ -105,7 +105,7 @@ function hexToRgb(hex) {
 }
 
 function updateSelectedHueIndicator(hue) {
-  const indicatorPosition = (hue / 100) * hueSlider.clientWidth; // Calculate the position of the selected hue indicator
+  const indicatorPosition = (hue / 1000) * hueSlider.clientWidth; // Calculate the position of the selected hue indicator
   selectedHue.style.left = `${indicatorPosition}px`;
 }
 
@@ -125,15 +125,15 @@ function copyToClipboard(text, element) {
 
   // Create a popover to show the message
   $(element).popover({
-    content: 'Hex Copied !!',
-    placement: 'top',
-    trigger: 'manual'
+    content: "Hex Copied !!",
+    placement: "top",
+    trigger: "manual",
   });
 
-  $(element).popover('show');
+  $(element).popover("show");
 
   // Hide the popover after a short delay
   setTimeout(() => {
-    $(element).popover('hide');
+    $(element).popover("hide");
   }, 2000);
 }

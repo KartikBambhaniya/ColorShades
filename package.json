@@ -1,6 +1,6 @@
 {
   "name": "ColorShades",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Now, In Figma Create shades with ease & copy the Hex code directly !!",
   "main": "code.js",
   "scripts": {

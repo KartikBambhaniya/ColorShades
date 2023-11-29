@@ -1,16 +1,15 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-
 <!-- My Custom CSS -->
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
   body {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
 
     &::-webkit-scrollbar {
       width: 0;
@@ -84,10 +83,11 @@
 <nav class="navbar mb-5 border-bottom border-dark px-4">
   <div class="container-fluid">
     <span class="navbar-brand fw-bold">
-      <img src="./Web/Icon.png" alt="Logo" width="25"
+      <img src="https://kartikbambhaniya.github.io/ColorShades/Web/Icon.png" alt="Logo" width="25"
         class="d-inline-block align-text-top me-2" />
       ColorShades
     </span>
+    <span class="navbar-text">v2.0.0</span>
   </div>
 </nav>
 
@@ -96,7 +96,7 @@
 
   <!-- Hue Slider -->
   <div id="hue-slider-container">
-    <input type="range" class="custom-range w-100 outline-none rounded-pill mb-3" id="hue-slider" max="100" />
+    <input type="range" class="custom-range w-100 outline-none rounded-pill mb-3" id="hue-slider" max="100" step="0.125"/>
     <div id="selected-hue"></div>
   </div>
 
@@ -120,12 +120,12 @@
 <!-- About -->
 <div class="container my-5">
   <div class="position-relative px-5 py-3 text-center text-muted bg-body border border-dark rounded-5">
-    <img src="./Web/Icon.png" class="mt-5 mb-4" width="64">
+    <img src="https://kartikbambhaniya.github.io/ColorShades/Web/Icon.png" class="mt-5 mb-4" width="64">
     <h3 class="text-body-emphasis fw-medium">Unlimited Color Shades Generator</h3>
     <p class="col-lg-6 mx-auto mb-4">
       This Figma plugin allows users to dynamically explore and generate color shades based on a selected hue, providing a visual representation and hex codes for each shade to copy it.
     </p>
-    <a href="https://github.com/KartikBambhaniya/ColorShades" class="btn btn-outline-primary px-4 rounded-pill mb-5" role="button" target="_blank">
+    <a href="https://kartikbambhaniya.github.io/ColorShades/Web" class="btn btn-outline-primary px-4 rounded-pill mb-5 me-2" role="button" target="_blank" title="View Website version of this plugin">
       Web Version
     </a>
     <a href="https://www.linkedin.com/in/kartikbambhaniya" class="btn btn-outline-dark px-4 rounded-pill mb-5" role="button" target="_blank">
@@ -138,7 +138,7 @@
 <!-- Footer -->
 <footer class="px-5 pt-3 mt-4 border-top border-dark text-body-dark">
   <div class="d-flex align-items-center">
-    <span class="mb-3">© 2023 <a href="https://github.com/BambhaniyaKartik/BinaryColorShader/blob/main/LICENSE" class="text-decoration-none">Creative Commons (CC BY-NC) 4.0 License</a> | Current v1.0.0</span>
+    <span class="mb-3">© 2023 <a href="https://github.com/BambhaniyaKartik/BinaryColorShader/blob/main/LICENSE" class="text-decoration-none">Creative Commons (CC BY-NC) 4.0 License</a></span>
   </div>
 </footer>
 
@@ -151,9 +151,7 @@
   // JavaScript logic
   const hueSlider = document.getElementById("hue-slider");
   const selectedHue = document.getElementById("selected-hue");
-  const selectedColorPreview = document.getElementById(
-    "selected-color-preview"
-  );
+  const selectedColorPreview = document.getElementById("selected-color-preview");
   const selectedColorCode = document.getElementById("selected-color-code");
   const colorShadesContainer = document.getElementById("color-shades");
 
@@ -211,10 +209,10 @@
   function generateColorShades(hue) {
     colorShadesContainer.innerHTML = "";    // Clear previous shades
 
-    const numShades = 25;    // Number of shades to generate
+    const numShades = 50;    // Number of shades to generate
 
     for (let i = 0; i < numShades; i++) {
-      const lightness = (i + 1) * 4;      // Calculate lightness for each shade
+      const lightness = (i + 1) * 2;      // Calculate lightness for each shade
       const shadeColor = calculateColorShade(hue, lightness);      // Calculate the color for the shade
       const shadeDiv = document.createElement("div");      // Create a div for the shade
       shadeDiv.className = "shade d-flex flex-column justify-content-center align-items-center w-100";
@@ -256,7 +254,7 @@
   }
 
   function updateSelectedHueIndicator(hue) {
-    const indicatorPosition = (hue / 100) * hueSlider.clientWidth;    // Calculate the position of the selected hue indicator
+    const indicatorPosition = (hue / 1000) * hueSlider.clientWidth;    // Calculate the position of the selected hue indicator
     selectedHue.style.left = `${indicatorPosition}px`;
   }
 
@@ -273,5 +271,7 @@
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);  
+
+    parent.postMessage({ pluginMessage: { type: 'copied', text }}, "*");
   }
 </script>
