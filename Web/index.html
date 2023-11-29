@@ -5,46 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColorShades</title>
-
     <link rel="apple-touch-icon" sizes="180x180" href="Icon.png">
-
     <link rel="icon" type="image/png" sizes="32x32" href="Icon.png">
-
     <meta name="title" content="ColorShades : Now, Create shades with ease & copy the Hex code directly !!">
-
     <meta name="description" content="This ColorShades allows users to dynamically explore and generate color shades based on a selected hue,
     providing a visual representation and hex codes for each shade to copy it.">
-
     <meta name="keywords"
         content="colorshades,color shades,shades,color,gradient generator,gradient,palette,figma plugin,plugin,color hunt,color code,coolors,gradient hunt,my color space,ai,color scheme">
-
     <meta property="og:description" content="Create shades with ease & copy the Hex code directly !!">
-
     <meta property="og:title" content="ColorShades">
-
-    <meta property="og:image" content="./Icon.png">
-
-    <meta property="og:url" content="https://kartikbambhaniya.github.io/ColorShades/Web/">
-
-
-
+    <meta property="og:image" content="https://kartikbambhaniya.github.io/ColorShades/Web/Icon.png">
+    <meta property="og:url" content="https://kartikbambhaniya.github.io/ColorShades/Web">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
     <!-- Own CSS -->
     <link rel="stylesheet" href="style.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 </head>
-
 <body>
-
     <!-- UI Body -->
     <nav class="navbar mb-0 border-bottom border-dark px-5">
         <div class="container-fluid">
@@ -52,7 +35,6 @@
                 <img src="Icon.png" alt="Logo" width="26" class="d-inline-block align-text-top me-2" />
                 ColorShades
             </span>
-
             <span class="navbar-text text-primary d-none d-md-block">
                 <a role="button" class="text-decoration-none text-primary" href="#About">About</a>
             </span>
@@ -69,15 +51,12 @@
         </div>
     </nav>
 
-
     <div class="container mt-5 px-4">
-
         <!-- Hue Slider -->
         <div id="hue-slider-container">
             <input type="range" class="custom-range w-100 outline-none rounded-pill mb-3" id="hue-slider" max="100" />
             <div id="selected-hue"></div>
         </div>
-
         <!-- Selected Color Container -->
         <div id="selected-color-container" class="d-flex align-items-center mt-3">
             <div id="selected-color-preview" class="border rounded-pill me-2"></div>
@@ -85,7 +64,6 @@
                 Hex Code
             </div>
         </div>
-
         <!-- Color Shades -->
         <div class="mt-5">
             <h3 class="fw-bold mb-2">Shades</h3>
@@ -93,7 +71,6 @@
             <div id="color-shades" class="d-flex flex-wrap mb-5"></div>
         </div>
     </div>
-
 
     <!-- About -->
     <div class="container my-5" id="About">
@@ -103,7 +80,6 @@
                 Elevate your design process with the Figma Color Shader Plugin. Seamlessly navigate the spectrum,
                 effortlessly generating vibrant color Shades. Unleash creativity and streamline your workflow.
             </p>
-
                 <div class="col-md-6 my-4 mx-auto">
                     <div class="card text-start border-dark rounded-4 mb-3">
                         <div class="card-header fw-bold px-4 py-3 border-dark">
@@ -135,7 +111,6 @@
                 If you run into any bugs or have any feature requests please submit an issue on Github or comment below.
                 or Visit the website version of this Plugin.
             </p>
-
             <a href="https://www.figma.com/community/plugin/1309939872279901716/colorshades" class="btn btn-outline-primary px-4 rounded-pill mb-5 mx-1"
                 role="button">
                 Figma Plugin
@@ -151,7 +126,6 @@
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer class="px-5 pt-3 mt-4 border-top border-dark text-body-dark">
         <div class="d-flex align-items-center">
@@ -160,10 +134,8 @@
         </div>
     </footer>
 
-
     <!-- Own JS -->
     <script src="logic.js"></script>
-
     <!-- Popper.js & Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -171,5 +143,4 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
