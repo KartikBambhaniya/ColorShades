@@ -5,7 +5,7 @@
 Elevate your design process with the [Figma Color Shader Plugin](https://www.figma.com/community/plugin/1309939872279901716/colorshades). Seamlessly navigate the spectrum, effortlessly generating vibrant color Shades. Unleash creativity and streamline your workflow.
 
 [![Figma Link](https://kartikbambhaniya.github.io/ColorShades/Web/Figma.svg)](https://www.figma.com/community/plugin/1309939872279901716/colorshades) :white_circle:
-[![Website Link](https://kartikbambhaniya.github.io/ColorShades/Web/Website.svg)](https://kartikbambhaniya.github.io/ColorShades/Web) :white_circle:
+[![Website Link](https://kartikbambhaniya.github.io/ColorShades/Web/Web.svg)](https://kartikbambhaniya.github.io/ColorShades/Web) :white_circle:
 [![GitHub Repo Link](https://kartikbambhaniya.github.io/ColorShades/Web/Github.svg)](https://github.com/KartikBambhaniya/ColorShades)
 
 ### How to Use :
